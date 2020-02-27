@@ -30,7 +30,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>escuelaing.arep.URLReader</mainClass>
+              <mainClass>escuelaing.arep.App</mainClass>
             </manifest>
           </archive>
         </configuration>
