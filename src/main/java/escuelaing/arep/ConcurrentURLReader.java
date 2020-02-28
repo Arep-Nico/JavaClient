@@ -8,16 +8,16 @@ import java.util.concurrent.Executors;
  */
 public class ConcurrentURLReader {
 
-    private boolean running;
+    private int size;
     private final ExecutorService es;
 
     public ConcurrentURLReader(int poolSize) {
         es = Executors.newFixedThreadPool(poolSize);
-        running = true;
+        size = poolSize;
     }
 
-    public void start(String[] args){
-        while (running) {
+    public void start(String[] args) {
+        for (int i = 0; i < size; i++) {
             es.execute(new URLReader(args));
         }
     }
